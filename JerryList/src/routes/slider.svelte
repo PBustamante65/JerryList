@@ -49,6 +49,7 @@
 		background-size: 20px 20px;
 		background-image: repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
 		clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 45% 100%, 0% 50%);
+		overflow: hidden;
 	}
 
 	.sliderWrapper {
