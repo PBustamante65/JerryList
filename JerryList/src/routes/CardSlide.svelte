@@ -15,6 +15,8 @@
 	let imags = ['/Prod1.png', '/Prod2.png', '/Prod3.png', '/Prod4.png', '/Prod5.png'];
 	let back = ['/wallback.jpg'];
 	let ProdTitles = ['Prod 1', 'Prod 2', 'Prod 3', 'Prod 4', 'Prod 5'];
+	let BackColor = ['green', 'red', 'blue', 'grey', 'teal'];
+	let ProdPrice = ['$355', '$354', '$353', '$352', '$351'];
 
 	let sliderEl;
 
@@ -61,6 +63,7 @@
 				style={`background-image: url(${img}); transform: scale(1.03) translate(${block.CX * 0.05}px, ${block.CY * 0.05}px) rotateX(${block.CY * 0.05}deg) rotateY(${block.CX * 0.05}deg);`}
 			>
 				<h1 class="ProdTitle">{ProdTitles[i]}</h1>
+				<h2 class="ProdPrice">{ProdPrice[i]}</h2>
 				<div
 					class="circleLight"
 					style={`background: radial-gradient(circle at ${mouse.X}px ${mouse.Y}px, rgba(255,255,255,0.4), transparent)`}
@@ -101,7 +104,7 @@
 			height: 100%;
 			opacity: 0;
 			visibility: hidden;
-			transition: 0.5s;
+			transition: 0.7s;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -115,6 +118,11 @@
 		}
 
 		.block {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
 			width: 100%;
 			height: 100%;
 			max-width: 450px;
@@ -128,18 +136,21 @@
 			background-position: center;
 			position: relative;
 			transition:
-				box-shadow 0.5s,
+				box-shadow 0.7s,
 				transform 0.2s ease-out;
 			transform-style: preserve-3d;
 			will-change: transform;
 
 			.ProdTitle {
-				justify-content: center;
-				align-items: center;
-				display: flex;
-				margin: auto;
+				position: absolute;
 				font-weight: 600;
-				margin-bottom: 0;
+				top: 0;
+				left: 180px;
+			}
+
+			.ProdPrice {
+				position: absolute;
+				bottom: 0;
 			}
 
 			&:hover {
