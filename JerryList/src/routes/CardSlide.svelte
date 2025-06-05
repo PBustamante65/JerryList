@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { currentIndex } from './slideractions';
+	import Threadbg from './threadbg.svelte';
 
 	let mouse = { X: 0, Y: 0, CX: 0, CY: 0 };
 	let block = { X: 0, Y: 0, CX: 0, CY: 0 };
@@ -52,8 +53,15 @@
 		<div
 			class="item {i === $currentIndex ? 'active' : ''}"
 			id={`slide-${i}`}
-			style="background-image: url({back});"
+			style="background: rgba(0, 0, 0, 0.4);"
 		>
+			<Threadbg
+				color={[0.9, 0.5, 0.8]}
+				amplitude={2}
+				distance={0.3}
+				enableMouseInteraction={false}
+				style="width: 100%; height: 400px; position: absolute;"
+			/>
 			<div
 				bind:this={sliderEl}
 				class="block"

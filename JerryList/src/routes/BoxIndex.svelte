@@ -1,6 +1,7 @@
 <script>
 	import { currentIndex } from './slideractions';
 	import CardSlide from './CardSlide.svelte';
+	import Threadbg from './threadbg.svelte';
 </script>
 
 <nav>
