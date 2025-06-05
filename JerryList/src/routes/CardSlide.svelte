@@ -53,7 +53,7 @@
 		<div
 			class="item {i === $currentIndex ? 'active' : ''}"
 			id={`slide-${i}`}
-			style="background: rgba(0, 0, 0, 0.4);"
+			style="background: rgba(255, 255, 255, 1);"
 		>
 			<Threadbg
 				color={[0.9, 0.5, 0.8]}
